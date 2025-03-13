@@ -372,6 +372,11 @@ if vim.g.vscode then
   vim.keymap.set('n', ']e', [[<cmd>call VSCodeNotify('editor.action.marker.next')<cr>]])
   vim.keymap.set('n', '[e', [[<cmd>call VSCodeNotify('editor.action.marker.prev')<cr>]])
   vim.keymap.set('n', '<leader>cr', [[<cmd>call VSCodeNotify('editor.action.rename')<cr>]])
+  vim.keymap.set('n', '<leader>bd', [[<cmd>call VSCodeNotify('workbench.action.closeActiveEditor')<cr>]])
+  vim.keymap.set('n', '<leader>bc', [[<cmd>call VSCodeNotify('workbench.action.closeAllEditors')<cr>]])
+  vim.keymap.set('n', 'L', [[<cmd>call VSCodeNotify('workbench.action.nextEditor')<cr>]])
+  vim.keymap.set('n', 'H', [[<cmd>call VSCodeNotify('workbench.action.previousEditor')<cr>]])
+  vim.keymap.set('n', '<leader>co', [[<cmd>call VSCodeNotify('editor.action.organizeImports')<cr>]])
 end
 
 local function print_plugins()
@@ -382,6 +387,6 @@ local function print_plugins()
     end
   end
 end
-print_plugins()
+-- print_plugins()
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
